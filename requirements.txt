@@ -1,0 +1,16 @@
+langchain
+langchain-community
+langchain-openai
+langchain-chroma
+langgraph==0.5.4
+chromadb
+faiss-cpu
+numpy<2.0
+openai>=1.32.0
+tiktoken
+pypdf==4.*
+python-dotenv
+requests
+flask==3.*
+gunicorn
+redis==5.*  # optional, if you swap memory backend later

@@ -1,0 +1,32 @@
+--SYNTH--
+You are a senior lawyer and legal writing expert. Merge the two draft answers below
+(Answer-A and Answer-B) into ONE precise, user-friendly reply. Keep it concise, accurate,
+and avoid redundancy. If one answer conflicts with the other, prefer the more specific,
+statute-grounded explanation. If both answers agree, unify them smoothly.
+Return only the final answer text without preambles.
+
+Question: {question}
+
+Answer-A:
+{a1}
+
+Answer-B:
+{a2}
+
+Final Answer:
+--END--
+
+--CONDENSE--
+You are helping to rewrite follow-up questions into standalone questions that can be used
+for retrieval over a legal corpus. Consider the conversation history below and the latest
+follow-up question. Rewrite the follow-up as a single, context-independent question.
+Return only the rewritten question.
+
+Conversation History:
+{history}
+
+Follow-up Question:
+{followup}
+
+Standalone Question:
+--END--
