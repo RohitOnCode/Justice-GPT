@@ -1,4 +1,3 @@
-# src/agents/rag_graph.py
 from __future__ import annotations
 import os, pathlib, dotenv
 from typing import TypedDict, NotRequired
@@ -120,10 +119,9 @@ def synthesize(state: dict) -> dict:
         a1=state.get("ans1", ""),
         a2=state.get("ans2", ""),
     )
-    final = llm.invoke(prompt)
-    final = final.content
+    final = llm.invoke(prompt).content
 
-    # IMPORTANT: update shared memory with this turn
+    # update shared memory with this turn
     try:
         shared_memory.chat_memory.add_user_message(state["query"])
         shared_memory.chat_memory.add_ai_message(final)

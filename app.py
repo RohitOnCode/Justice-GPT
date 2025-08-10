@@ -16,7 +16,6 @@ def chat():
         return jsonify({"answer": "Please ask a legal question."})
     result = rag_pipeline.invoke({"query": user_msg})
     answer = result.get("final", "Sorry, I couldn't generate an answer.")
-    print("/n",answer)
     return jsonify({"answer": answer})
 
 if __name__ == "__main__":
